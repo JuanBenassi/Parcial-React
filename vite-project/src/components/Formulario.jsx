@@ -38,7 +38,7 @@ const Formulario = ({ handler }) => {
                 onChange={e => { setNombre(e.target.value) }}
             />
 
-            <label htmlFor="">Edad</label>
+            <label htmlFor="">Apellido</label>
             <input
                 type="text"
                 value={apellido}
