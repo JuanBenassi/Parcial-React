@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       <Formulario handler={handler} />
-      {cardState ? <Card nombre={nombre} edad={apellido} /> : undefined}
+      {cardState ? <Card nombre={nombre} apellido={apellido} /> : undefined}
     </div>
   )
 }

@@ -10,11 +10,11 @@ const Formulario = ({ handler }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const data = {
-            nombre: nombre,
-            edad: apellido
+            nombre: nombre.trim(),
+            apellido: apellido
         }
-        if (data.nombre.length < 3) {
-            setErr('Necesita más caracteres')
+        if (data.nombre.length < 3 || data.apellido.length < 6) {
+            setErr('Por favor chequea que la información sea correcta')
             handler()
 
         } else {
@@ -40,8 +40,8 @@ const Formulario = ({ handler }) => {
 
             <label htmlFor="">Edad</label>
             <input
-                type="number"
-                value={edad}
+                type="text"
+                value={apellido}
                 onChange={e => { setApellido(e.target.value) }}
             />
 
